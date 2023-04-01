@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('Nama', 20);
             $table->string('Kelas', 20);
             $table->string('Jurusan', 20);
-            $table->bigInteger('No_handphone');
+            $table->bigInteger('No_Handphone');
             $table->timestamps();
 
         });
