@@ -88,7 +88,8 @@ class MahasiswaController extends Controller
         ]); 
  
         //fungsi eloquent untuk mengupdate data inputan kita 
-        Mahasiswa::find($Nim)->update($request->all());  
+        Mahasiswa::find($Nim)->update($request->all()); 
+         
         //jika data berhasil diupdate, akan kembali ke halaman utama         
         return redirect()->route('mahasiswas.index') 
             ->with('success', 'Mahasiswa Berhasil Diupdate'); 
