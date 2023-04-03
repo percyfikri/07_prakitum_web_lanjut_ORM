@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('Kelas', 20);
             $table->string('Jurusan', 20);
             $table->bigInteger('No_Handphone');
+            $table->string('Email',20);
+            $table->string('TanggalLahir', 20);
             
         });
     }

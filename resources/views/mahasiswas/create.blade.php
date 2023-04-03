@@ -42,6 +42,14 @@
                     <label for="No_Handphone">No_Handphone</label>                     
                     <input type="No_Handphone" name="No_Handphone" class="formcontrol" id="No_Handphone" aria-describedby="No_Handphone" >                 
                 </div> 
+                <div class="form-group">
+                    <label for="Email">Email</label>                     
+                    <input type="Email" name="Email" class="formcontrol" id="Email" aria-describedby="Email" >                 
+                </div> 
+                <div class="form-group">
+                    <label for="TanggalLahir">Tanggal Lahir</label>                     
+                    <input type="TanggalLahir" name="TanggalLahir" class="formcontrol" id="TanggalLahir" aria-describedby="TanggalLahir" >                 
+                </div> 
              <button type="submit" class="btn btn-primary">Submit</button> 
              </form> 
              </div> 
