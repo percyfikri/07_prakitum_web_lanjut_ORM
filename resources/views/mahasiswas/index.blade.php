@@ -29,7 +29,6 @@
         </tr> 
         @foreach ($mahasiswas as $Mahasiswa) 
         <tr> 
-
             <td>{{ $Mahasiswa->Nim }}</td> 
             <td>{{ $Mahasiswa->Nama }}</td> 
             <td>{{ $Mahasiswa->Kelas }}</td> 
