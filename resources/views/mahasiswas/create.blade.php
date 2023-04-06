@@ -48,7 +48,7 @@
                 </div> 
                 <div class="form-group">
                     <label for="TanggalLahir">Tanggal Lahir</label>                     
-                    <input type="TanggalLahir" name="TanggalLahir" class="form-control" id="TanggalLahir" aria-describedby="TanggalLahir" >                 
+                    <input type="date" name="TanggalLahir" class="form-control" id="TanggalLahir" aria-describedby="TanggalLahir" >                 
                 </div> 
              <button type="submit" class="btn btn-primary">Submit</button> 
              </form> 
