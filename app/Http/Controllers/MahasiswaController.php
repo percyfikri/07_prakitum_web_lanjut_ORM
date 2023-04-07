@@ -114,7 +114,14 @@ class MahasiswaController extends Controller
      public function search(Request $request)
     {
         $search = $request->search;
-        $mahasiswas = Mahasiswa::where('Nama', 'like', '%' . $search . '%')->paginate(5);
+        $mahasiswas = Mahasiswa::where('Nim', 'like', '%' . $search . '%')
+                                ->orWhere('Nama', 'like', '%' . $search . '%')
+                                ->orWhere('Jurusan', 'like', '%' . $search . '%')
+                                ->orWhere('Kelas', 'like', '%' . $search . '%')
+                                ->orWhere('No_Handphone', 'like', '%' . $search . '%')
+                                ->orWhere('Email', 'like', '%' . $search . '%')
+                                ->orWhere('TanggalLahir', 'like', '%' . $search . '%')
+                                ->paginate(5);
         return view('mahasiswas.index', compact('mahasiswas'));
     }
 }
