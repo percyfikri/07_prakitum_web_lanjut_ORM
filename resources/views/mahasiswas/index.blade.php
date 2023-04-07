@@ -2,13 +2,25 @@
 
 @section('content') 
     <div class="row"> 
-        <div class="col-lg-12 margin-tb"> 
-            <div class="pull-left mt-2"> 
-                <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>             
+        <div class="col-lg-12 margin-tb text-center"> 
+            <div class="pull-left mt-3 mb-4"> 
+                <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>         
             </div> 
-            <div class="float-right my-2"> 
-                <a class="btn btn-success" href="{{ route('mahasiswas.create') }}"> Input Mahasiswa</a> 
-            </div> 
+            <div class="row justify-content-end mb-2">
+                <div class="col-md-6">
+                    <form action="{{ route('search') }}" method="POST">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="text" value="{{ (request()->search) ? request()->search : '' }}" name="search" class="form-control" placeholder="Search...">
+                            <button class="btn btn-warning" type="submit">Search </button>
+                          </div>
+                    </form>
+                </div>
+                <div class="float-right"> 
+                    <a class="btn btn-success" href="{{ route('mahasiswas.create') }}">Input Mahasiswa</a> 
+                </div> 
+            </div>
+            
         </div> 
     </div> 
 
@@ -27,7 +39,7 @@
             <th>No_Handphone</th> 
             <th>email</th> 
             <th>Tanggal Lahir</th> 
-            <th width="280px">Action</th> 
+            <th width="230px">Action</th> 
         </tr> 
         @foreach ($mahasiswas as $Mahasiswa) 
         <tr> 

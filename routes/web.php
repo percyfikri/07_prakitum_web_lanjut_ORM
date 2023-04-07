@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::resource('mahasiswas', MahasiswaController::class);
+Route::post('search', [MahasiswaController::class, 'search'])->name('search');
